@@ -176,8 +176,8 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 100
   transGun: {fileID: 1974382808}
-  gun: {fileID: 0}
-  bulletObj: {fileID: 0}
+  gun: {fileID: 1552892052}
+  bulletObj: {fileID: 9162047389006064978, guid: 18d4831b417f140bf8b372c93d45cd40, type: 3}
 --- !u!65 &620903249
 BoxCollider:
   m_ObjectHideFlags: 0
