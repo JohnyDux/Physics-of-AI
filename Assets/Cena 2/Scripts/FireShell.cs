@@ -19,7 +19,7 @@ public class FireShell : MonoBehaviour {
 
     void RotateTurret()
     {
-        float? angle = CalculateAngle(true);
+        float? angle = CalculateAngle(false);
         if(angle != null)
         {
             turretBase.localEulerAngles = new Vector3(360f -(float)angle, 0f, 0f);
