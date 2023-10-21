@@ -13,7 +13,8 @@ public class FireShell : MonoBehaviour {
 
     void CreateBullet() {
 
-        Instantiate(bullet, turret.transform.position, turret.transform.rotation);
+        GameObject shell = Instantiate(bullet, turret.transform.position, turret.transform.rotation);
+        shell.GetComponent<Rigidbody>().velocity = speed * turretBase.forward;
     }
 
     void RotateTurret()
