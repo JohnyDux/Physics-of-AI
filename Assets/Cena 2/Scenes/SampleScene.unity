@@ -356,5 +356,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shell
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8980040861482888860, guid: 18d4831b417f140bf8b372c93d45cd40, type: 3}
+    - {fileID: -4651157614815974391, guid: 18d4831b417f140bf8b372c93d45cd40, type: 3}
+    - {fileID: -3193207519558505162, guid: 18d4831b417f140bf8b372c93d45cd40, type: 3}
+    - {fileID: -486528500484722519, guid: 18d4831b417f140bf8b372c93d45cd40, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18d4831b417f140bf8b372c93d45cd40, type: 3}
