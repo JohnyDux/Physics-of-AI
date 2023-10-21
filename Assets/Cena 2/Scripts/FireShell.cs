@@ -31,7 +31,7 @@ public class FireShell : MonoBehaviour {
         Vector3 targetDir = enemy.transform.position - this.transform.position;
         float y = targetDir.y;
         targetDir.y = 0f;
-        float x = targetDir.magnitude;
+        float x = targetDir.magnitude - 1;
         float gravity = 9.8f;
         float sSqr = speed * speed;
         float underTheSqrRoot = (sSqr * sSqr) - gravity * (gravity * x * x + 2 * y * sSqr);
