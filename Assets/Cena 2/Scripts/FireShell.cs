@@ -7,11 +7,37 @@ public class FireShell : MonoBehaviour {
     public GameObject bullet;
     public GameObject turret;
     public GameObject enemy;
+    float speed = 15;
     float rotSpeed = 2;
 
     void CreateBullet() {
 
         Instantiate(bullet, turret.transform.position, turret.transform.rotation);
+    }
+
+    float? CalculateAngle(bool low)
+    {
+        Vector3 targetDir = enemy.transform.position - this.transform.position;
+        float y = targetDir.y;
+        targetDir.y = 0f;
+        float x = targetDir.magnitude;
+        float gravity = 9.8f;
+        float sSqr = speed * speed;
+        float underTheSqrRoot = (sSqr * sSqr) - gravity * (gravity * x * x + 2 * y * sSqr);
+
+        if (underTheSqrRoot >= 0f)
+        {
+            float root = Mathf.Sqrt(underTheSqrRoot);
+            float highAngle = sSqr + root;
+            float lowAngle = sSqr - root;
+
+            if (low)
+                return (Mathf.Atan2(lowAngle, gravity * x) * Mathf.Rad2Deg);
+            else
+                return (Mathf.Atan2(highAngle, gravity * x) * Mathf.Rad2Deg);
+        }
+        else
+            return null;
     }
 
     void Update()
